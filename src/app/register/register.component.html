@@ -1,0 +1,50 @@
+<div class="m_row">
+        <div class="m_col-sm-2 m_col-md-3"></div>
+        <div class="m_col-sm-8 m_col-md-6">
+            <form class="m_text-dark" target="_blank" #ref="ngForm" (ngSubmit)="onSignup(ref.value)" class="w-75 mx-auto mt-5">
+                <div class="m_mb-3">
+                    <label for="m_un" class="m_form-label">Username</label>
+                    <input type="text" class="m_form-control" id="m_un" name="username"  ngModel>
+                    <p class="m_text-warning">* username required</p>
+                    <p class="m_text-warning">* username should be of minimum 5 characters</p>
+                </div>
+                <div class="m_mb-3">
+                    <label for="m_pw" class="m_form-label">Password</label>
+                    <input type="password" class="m_form-control" id="m_pw" name="password"  ngModel>
+                    <p class="m_text-warning">* 5 small letters</p>
+                </div>
+    
+                <div class="m_mb-3">
+                    <label for="m_cpw" class="m_form-label">Confirm Password</label>
+                    <input type="password" class="m_form-control" id="m_cpw" name="cpassword"  ngModel>
+                    <p class="m_text-warning">* 5 small letters</p>
+                </div>
+    
+                <div class="m_mb-3">
+                    <label for="m_dob" class="m_form-label">Date of birth</label>
+                    <input type="date" class="m_form-control" id="m_dob" name="dob"  ngModel>
+                </div>
+            
+            
+                <div class="m_mb-3">
+                    <label for="m_em" class="m_form-label">Email</label>
+                    <input type="email" class="m_form-control" id="m_em" name="email"  ngModel>
+                    <p class="m_text-warning"><a href="mailto:name@domain.com" target="_blank" rel="noreferrer">name@domain.com</a></p>
+                </div>
+                
+                <div class="m_mb-3">
+                    <label for="m_pn" class="m_form-label">Phone Number</label>
+                    <input type="tel" class="m_form-control" id="m_pn" name="phone"  ngModel>
+                    <p class="m_text-warning">Please enter 10 digit Phone Number</p>
+                </div>
+                <div class="m_mb-3">
+                    <label for="m_gy" class="m_form-label">Graduation Year</label>
+                    <input type="text" class="m_form-control" id="m_gy" name="gradyear"  ngModel>
+                    <p class="m_text-warning">Plase enter year in **** format
+                </p></div>
+    
+                <button class="m_btn m_btn-success m_d-block m_mx-auto m_m-4" type="submit">Register</button>
+            </form>
+        </div>
+        <div class="m_col-sm-2 m_col-md-3"></div>
+    </div>

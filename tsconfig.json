@@ -26,5 +26,11 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "compilerOptions":{
+    "suppressImplicitAnyIndexErrors": true,
+    "strictNullChecks":false,
+    "strictPropertyInitialization": false,
+  
+   }
 }
