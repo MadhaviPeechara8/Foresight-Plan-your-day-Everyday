@@ -17,7 +17,7 @@ const mc = require("mongodb").MongoClient;
 
 
 //connection string
-const databaseUrl = "mongodb+srv://madhavi_dicky:dicky@86@cluster0.vmdh8.mongodb.net/foresight?retryWrites=true&w=majority"
+const databaseUrl = DatabaseUrl;
 
 //const databaseUrl="mongodb://<username>:<password>@cluster0-shard-00-00.rjvoz.mongodb.net:27017,cluster0-shard-00-01.rjvoz.mongodb.net:27017,cluster0-shard-00-02.rjvoz.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
 
