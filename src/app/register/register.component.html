@@ -1,0 +1,51 @@
+<h2 class="text-center text-dark mt-5">Registration form</h2>
+<div class="row">
+        <div class="col-sm-2 col-md-3"></div>
+        <div class="col-sm-8 col-md-6">
+            <form class="text-dark" target="_blank" #ref="ngForm" (ngSubmit)="onSignup(ref.value)" class="w-75 mx-auto mt-5">
+                <div class="mb-3">
+                    <label for="un" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="un" name="username" ngModel required minlength="5" #refusername="ngModel">
+                    <p class="text-warning" *ngIf="(ref.submitted||refusername.touched)&& refusername.errors?.required">* username required</p>
+                    <p class="text-warning" *ngIf="(ref.submitted||refusername.touched)&& refusername.errors?.minlength">* username should be of minimum 5 characters</p>
+                </div>
+                <div class="mb-3">
+                    <label for="pw" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="pw" name="password"  ngModel pattern="[a-z]{5}" #refpass="ngModel">
+                    <p class="text-warning" *ngIf="(ref.submitted||refpass.touched)&& refpass.errors?.pattern">* 5 small letters</p>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="cpw" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="cpw" name="cpassword"  ngModel pattern="[a-z]{5}" #refcpass="ngModel">
+                    <p class="text-warning" *ngIf="(ref.submitted||refcpass.touched)&& refcpass.errors?.pattern">* 5 small letters</p>
+                </div>
+    
+                <div class="mb-3">
+                    <label for="dob" class="form-label">Date of birth</label>
+                    <input type="date" class="form-control" id="dob" name="dob"  ngModel>
+                </div>
+            
+            
+                <div class="mb-3">
+                    <label for="em" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="em" name="email"  ngModel pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #refemail="ngModel">
+                    <p class="text-warning" *ngIf="(ref.submitted||refemail.touched)&& refemail.errors?.pattern">name@domain.com</p>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="pn" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="pn" name="phone"  ngModel pattern="^\d{10}$" #refnum="ngModel">
+                    <p class="text-warning" *ngIf="(ref.submitted||refnum.touched)&& refnum.errors?.pattern">Please enter 10 digit Phone Number</p>
+                </div>
+                <div class="mb-3">
+                    <label for="gy" class="form-label">Graduation Year</label>
+                    <input type="text" class="form-control" id="gy" name="gradyear"  ngModel pattern="\d{4}$" #refyr="ngModel">
+                    <p class="text-warning" *ngIf="(ref.submitted||refyr.touched)&& refyr.errors?.pattern">Plase enter year in **** format
+                </p></div>
+    
+                <button class="btn btn-success d-block mx-auto m-4" type="submit">Register</button>
+            </form>
+        </div>
+        <div class="m_col-sm-2 m_col-md-3"></div>
+    </div>

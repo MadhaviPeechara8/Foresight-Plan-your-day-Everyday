@@ -1,0 +1,33 @@
+
+.table-content{
+    /* background-image: url("../../../assets/bg-7.svg"); */
+    background-color:white ;
+    background-image: linear-gradient(to left,white,#C3C3E5);
+    background-size: 100% auto;
+    
+}
+
+
+.title{
+    color:purple;
+    font-weight: 500;
+}
+
+input{
+    width:100%;
+    border-radius: 5px;
+}
+
+
+.btn-edit{
+    background-color: #F28123;
+    color:white;
+}
+
+.btn-delete{
+    background-color: #D90368;
+    color: white;
+}
+.btn-style{
+    border-radius: 30% 10%;
+}

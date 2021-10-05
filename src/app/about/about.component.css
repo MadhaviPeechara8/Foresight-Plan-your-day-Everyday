@@ -1,0 +1,34 @@
+#features
+{
+  padding:2% 2%;
+  background-color:#fff;
+  position:relative;
+  z-index:1;
+}
+.feature-images{
+  text-align:center;
+  padding:5%;
+}
+/* icon style */
+.icon
+{
+color:#000;
+margin-bottom: 1rem;
+}
+.icon:hover{
+color:darkblue;
+}
+.heading{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.carousel-item
+{
+    padding:7% 15%;
+}
+.card-img-top{
+  padding-top: 5px;
+width: 150px;
+height:150px;
+border-radius:50%;
+}

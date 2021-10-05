@@ -1,0 +1,29 @@
+<div class="row mt-5">
+    <div class="col-sm-2 col-md-3"></div>
+    <div class="col-sm-8 col-md-6">
+      <form (ngSubmit)="onSubmitnewplacement()">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="pt" placeholder="name@example.com" name="itemTitle"
+            [(ngModel)]="placementModel.itemTitle">
+          <label for="pt">Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="pi" placeholder="Password" name="itemLink"
+            [(ngModel)]="placementModel.itemLink">
+          <label for="pi">Link</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="pd" placeholder="Password" name="description"
+            [(ngModel)]="placementModel.description">
+          <label for="pd">Description</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="pd" placeholder="Password" name="status"
+            [(ngModel)]="placementModel.status">
+          <label for="pd">status</label>
+        </div>
+        <button class="btn btn-warning float-end" type="submit">Add</button>
+      </form>
+    </div>
+    <div class="col-sm-2 col-md-3"></div>
+  </div>

@@ -1,0 +1,29 @@
+<div class="row mt-5">
+    <div class="col-sm-2 col-md-3"></div>
+    <div class="col-sm-8 col-md-6">
+      <form (ngSubmit)="onSubmitnewprofile()">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="pt" placeholder="name@example.com" name="PlatformName"
+            [(ngModel)]="profileModel.ProfileName">
+          <label for="pt">Platform Name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="pi" placeholder="Password" name="Link"
+            [(ngModel)]="profileModel.Link">
+          <label for="pi">Link</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="pd" placeholder="Password" name="Description"
+            [(ngModel)]="profileModel.Description">
+          <label for="pd">Description</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="pd" placeholder="Password" name="Score"
+            [(ngModel)]="profileModel.Score">
+          <label for="pd">Score</label>
+        </div>
+        <button class="btn btn-warning float-end" type="submit">Add</button>
+      </form>
+    </div>
+    <div class="col-sm-2 col-md-3"></div>
+  </div>

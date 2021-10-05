@@ -1,0 +1,23 @@
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+.carousel {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+}
+
+.form-control{
+    border: none;
+    border-bottom: 1px solid rgb(214, 187, 214);
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0px;
+    color:rgb(10, 10, 10);
+}
+
+label{
+    color:rgb(7, 7, 7);
+}

@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfEbhEqpOaWGOSuApSy26Vp3DwKQ0SoKvbhA&usqp=CAU"  width="60px" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " routerLink="home" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="about" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="register" routerLinkActive="active" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Register</a>
+        </li>
+
+
+        <li class="nav-item" *ngIf="!us.userLoginStatus">
+          <a class="nav-link" routerLink="login" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Login</a>
+        </li>
+
+        <li class="nav-item"  *ngIf="us.userLoginStatus">
+          <a class="nav-link" routerLink="login" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"  (click)=userLogout()>Logout</a>
+        </li>
+
+        <li class="nav-item"  *ngIf="us.userLoginStatus">
+          <a class="nav-link" routerLink="dashboard/:username" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Dashboard</a>
+        </li>
+
+       
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

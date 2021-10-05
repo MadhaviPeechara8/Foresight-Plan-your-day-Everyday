@@ -1,0 +1,86 @@
+ <!-- <div class="card h-100 shadow text-center">
+    <img src="../../assets/place.PNG" class="card-img-top"  alt="...">
+    <div class="card-body">
+      <h5 class="card-title" style="color: #173e9c;">{{x.itemTitle}}</h5>
+      <p class="card-text">{{x.description}}</p>
+      <a href="{{x.itemLink}}"  target="_blank" role="button" class="btn add-product"><i class="fas fa-plus-square me-2"></i>Open</a>
+    </div>
+  </div>  -->
+  <div class="container-fluid">
+    <input type="text" name="productTitle" placeholder="Search by Company Name" class="form-control mt-2" [(ngModel)]="searchTerm">
+    <br>
+    <div class="table-content">
+        
+        <form #ref="ngForm" (ngSubmit)="savePlacement(ref.value)">
+            <table class="table text-center text-dark">
+                <thead>
+                    <th>Company Name</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Link</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let obj of placements| search :searchTerm;let ind=index">
+    
+                        <!-- product title -->
+                        <td class="title">
+                            <span *ngIf="!editplaceStatus || editplaceIndex!==ind">
+                                {{obj.itemTitle | uppercase}}
+                            </span>
+    
+                            <input type="text" name="itemTitle" [(ngModel)]="editplaceObj.itemTitle"
+                                *ngIf="editplaceStatus && editplaceIndex==ind">
+    
+                        </td>
+                        <!-- product description -->
+                        <td>
+                            <span *ngIf="!editplaceStatus || editplaceIndex!==ind">
+                                   {{ obj.description}}
+                
+                    
+                            </span>
+    
+                            <input type="text" name="description" [(ngModel)]="editplaceObj.description"
+                                *ngIf="editplaceStatus && editplaceIndex==ind">
+    
+                        </td>
+                        <td>
+                            <span *ngIf="!editplaceStatus || editplaceIndex!==ind">
+                                   {{ obj.status}}
+                    
+                            </span>
+    
+                            <input type="text" name="status" [(ngModel)]="editplaceObj.status"
+                                *ngIf="editplaceStatus && editplaceIndex==ind">
+    
+                        </td>
+                        <td>
+                            <!-- <img src={{obj.itemLink}} alt="" width="100px">  -->
+                            <a class="btn btn-primary btn-style" role="button" href={{obj.itemLink}} target=_blank>Open</a>
+                            <!-- {{obj.itemLink}} -->
+                        </td>
+                        <!-- edit  and delete -->
+                        <td>
+                            <span *ngIf="!editplaceStatus || editplaceIndex!==ind" class="d-block">
+                                <button class="btn btn-edit btn-sm p-1 m-1" (click)="editPlacement(obj,ind)" type="button"><i
+                                        class="fas fa-edit "></i>
+                                </button>
+                                <button class="btn btn-delete btn-sm p-1 m-1" (click)="deletePlacement(obj)" type="button">
+                                    <i class="fas fa-trash-alt "></i>
+                                </button>
+                            </span>
+    
+                            <span *ngIf="editplaceStatus && editplaceIndex==ind">
+                                <button class="btn btn-sm btn-success" type="submit">
+                                    <i class="fas fa-save text-white"></i>
+                                </button>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+     
+  </div>
+  

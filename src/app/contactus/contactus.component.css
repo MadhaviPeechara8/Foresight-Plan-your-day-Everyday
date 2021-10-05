@@ -1,0 +1,18 @@
+a:hover{
+    color: black
+}
+a:visited{
+    color: black;
+}
+.form-control{
+    border: none;
+    border-bottom: 1px solid rgb(214, 187, 214);
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0px;
+    color:rgb(10, 10, 10);
+}
+
+label{
+    color:rgb(7, 7, 7);
+}
