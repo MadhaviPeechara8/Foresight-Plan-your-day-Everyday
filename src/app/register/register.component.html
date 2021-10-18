@@ -11,13 +11,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="pw" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="pw" name="password"  ngModel pattern="[a-z]{5}" #refpass="ngModel">
+                    <input type="password" class="form-control" id="pw" name="password"  ngModel pattern="[a-zA-Z@0-9]{5}" #refpass="ngModel">
                     <p class="text-warning" *ngIf="(ref.submitted||refpass.touched)&& refpass.errors?.pattern">* 5 small letters</p>
                 </div>
     
                 <div class="mb-3">
                     <label for="cpw" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="cpw" name="cpassword"  ngModel pattern="[a-z]{5}" #refcpass="ngModel">
+                    <input type="password" class="form-control" id="cpw" name="cpassword"  ngModel pattern="[a-zA-Z@0-9]{5}" #refcpass="ngModel">
                     <p class="text-warning" *ngIf="(ref.submitted||refcpass.touched)&& refcpass.errors?.pattern">* 5 small letters</p>
                 </div>
     
