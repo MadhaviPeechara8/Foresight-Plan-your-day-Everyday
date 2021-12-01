@@ -1,4 +1,5 @@
-<h2 class="text-center text-dark mt-5">Registration form</h2>
+<div class="reg">
+<h2 class="text-center mt-0" style="background-color:#624a59; color:blanchedalmond;margin-top:5px;padding-bottom:10px;font-family:Niconne;font-size:45px;">Registration form</h2>
 <div class="row">
         <div class="col-sm-2 col-md-3"></div>
         <div class="col-sm-8 col-md-6">
@@ -11,14 +12,14 @@
                 </div>
                 <div class="mb-3">
                     <label for="pw" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="pw" name="password"  ngModel pattern="[a-zA-Z@0-9]{5}" #refpass="ngModel">
-                    <p class="text-warning" *ngIf="(ref.submitted||refpass.touched)&& refpass.errors?.pattern">* 5 small letters</p>
+                    <input type="password" class="form-control" id="pw" name="password"  ngModel pattern="[a-zA-Z@0-9]{6,}" #refpass="ngModel">
+                    <p class="text-warning" *ngIf="(ref.submitted||refpass.touched)&& refpass.errors?.pattern">Password should be of atleast 6 characters</p>
                 </div>
     
                 <div class="mb-3">
                     <label for="cpw" class="form-label">Confirm Password</label>
-                    <input type="password" class="form-control" id="cpw" name="cpassword"  ngModel pattern="[a-zA-Z@0-9]{5}" #refcpass="ngModel">
-                    <p class="text-warning" *ngIf="(ref.submitted||refcpass.touched)&& refcpass.errors?.pattern">* 5 small letters</p>
+                    <input type="password" class="form-control" id="cpw" name="cpassword"  ngModel pattern="[a-zA-Z@0-9]{6,}" #refcpass="ngModel">
+                    <p class="text-warning" *ngIf="(ref.submitted||refcpass.touched)&& refcpass.errors?.pattern">Password should be of atleast 6 characters</p>
                 </div>
     
                 <div class="mb-3">
@@ -44,8 +45,9 @@
                     <p class="text-warning" *ngIf="(ref.submitted||refyr.touched)&& refyr.errors?.pattern">Plase enter year in **** format
                 </p></div>
     
-                <button class="btn btn-success d-block mx-auto m-4" type="submit">Register</button>
+                <button class="btn d-block mx-auto m-4" style="background-color:#624a59; color:blanchedalmond;font-family: Charmonman;" type="submit">Register</button>
             </form>
         </div>
         <div class="m_col-sm-2 m_col-md-3"></div>
     </div>
+</div>

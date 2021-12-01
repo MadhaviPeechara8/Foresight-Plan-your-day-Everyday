@@ -1,7 +1,7 @@
-<div class="row">
+<div class="row" style="margin-left: 30px;margin-right: 30px; padding-top:15px;">
     <div class="col-md-4 col-sm-12" *ngIf="timetablestatus">
         <img src={{timetable[0].productImage}} alt="" height="500px" width="100%">
-        <button class="btn btn-sm btn-warning p-1 m-1" (click)="deletett(timetable[0])" type="button"><i class="fas fa-trash-alt text-danger"></i></button>
+        <button class="btn btn-sm p-1 m-1 mx-auto d-block" style="background-color: #624a59;" (click)="deletett(timetable[0])" type="button"><i class="fas fa-trash-alt" style="color:#ffe9ef;"></i></button>
     </div>
     <div class="col-md-4 col-sm-12" *ngIf="!timetablestatus">
         <form #ref="ngForm" (ngSubmit)="onsubtt(ref.value)" class="w-75 mx-auto mt-5">
@@ -33,7 +33,7 @@
                             <input type="text" name="ClassType" id="" [(ngModel)]="editClassObj.ClassType" *ngIf="editClassStatus  && editClassIndex===ind">
                         </td>
                         <td>
-                            <span *ngIf="!editClassStatus || editClassIndex!==ind"><button class="btn btn-primary text-white"><a href={{cls.ClassLink}} class="text-white" target="_blank">Join Class</a></button></span>
+                            <span *ngIf="!editClassStatus || editClassIndex!==ind"><button class="btn text-white" style="background-color: #624a59;"><a href={{cls.ClassLink}} class="text-white" target="_blank">Join Class</a></button></span>
                             <input type="text" name="ClassLink" id="" [(ngModel)]="editClassObj.ClassLink" *ngIf="editClassStatus  && editClassIndex===ind">
                         </td>
                         <!--edit and delete button-->
@@ -50,8 +50,8 @@
             </table>
         </form>
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" style="float:right;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class="fas fa-plus-circle"></i>
+        <button type="button" class="btn mx-auto d-block" style="background-color: #624a59;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="fas fa-plus-circle" style="color:white"></i>
   </button>
 
         <!-- Modal -->
@@ -59,7 +59,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add Ur Class</h5>
+                        <h5 class="modal-title float-left" id="exampleModalLabel" style="font-family: Niccone;font-size:25px;font-weight:bolder;color:#624a59;">Add Your Class</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -81,7 +81,7 @@
                                 <input type="text " class="form-control " id="pd" placeholder="Password" name="description" [(ngModel)]="onlineclsObj.description">
                                 <label for="pd ">Description</label>
                             </div>
-                            <button type="submit " class="btn btn-warning float-end ">Add Class</button>
+                            <button type="submit " class="btn mx-auto d-block " style="background-color: #624a59;color: #ffe9ef;">Add Class</button>
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -93,36 +93,36 @@
     </div>
 </div>
 <hr>
-<div class="row">
-    <div class="col-md-8 col-sm-12 text-center" style="background-color: #e9896a;">
+<div class="row" style="margin-left:30px;margin-right:30px;">
+    <div class="col-md-8 col-sm-12 text-center" style="background-color:#6ddccf;">
         <form>
-            <h1 class="text-center">Todo</h1>
+            <h1 class="text-center" style="color:#624a59;font-family:Niconne">Todo</h1>
             <br>
             <input type="text" class="form-control" #itemTitle style="width: 75%; margin: auto;">
             <br>
             <div class="input-group-addon hover-cursor">
-                <button class="btn btn-success" (click)="onAddTodoItem(itemTitle)"><i class="fas fa-plus-circle"></i></button>
+                <button class="btn" style="background-color: #624a59;" (click)="onAddTodoItem(itemTitle)"><i class="fas fa-plus-circle" style="color:#ffe9ef"></i></button>
             </div>
         </form>
         <br>
-        <h4 *ngFor="let t of todo;let ind=index;" style="background-color:#6ddccf;width: 80%; margin: auto; ">
+        <h4 *ngFor="let t of todo;let ind=index;" style="background-color:#624a59;color:white;width: 80%; margin: auto; ">
             {{t.Task}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span><button class="btn btn-sm btn-warning p-1 m-1" (click)="deleteTodo(t)" type="button"><i class="fas fa-trash-alt text-danger"></i></button></span>
+            <span><button class="btn btn-sm  p-1 m-1"  style="background-color:#ffe9ef;"(click)="deleteTodo(t)" type="button"><i class="fas fa-trash-alt" style="color: #624a59;"></i></button></span>
             <hr>
         </h4>
 
     </div>
     <div class="col-md-1"></div>
-    <div class="col-md-3 col-sm-12 " style="background-color: #d68060; padding: 10px;">
-        <h3>Upcoming Webinars <span>
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-    <i class="fas fa-plus-circle"></i>
+    <div class="col-md-3 col-sm-12 " style="background-color:#6ddccf; padding: 10px;">
+        <h3 style="color:#624a59;font-family:Niconne;">Upcoming Webinars <span>
+  <button type="button" class="btn" style="background-color: #624a59;" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+    <i class="fas fa-plus-circle" style="color:#ffe9ef"></i>
   </button></span></h3>
-        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div  style="margin-left:5px;" class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title float-left" style="color:#624a59;font-size:25px;font-family: Niconne;" id="exampleModalLabel">Add Webinar Details</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -151,7 +151,7 @@
                                 <input type="text " class="form-control " id="pf" placeholder="Password " name="speaker " [(ngModel)]="webinarObj.speaker ">
                                 <label for="pf ">Speaker Name</label>
                             </div>
-                            <button type="submit" class="btn btn-warning float-end " (click)="onSubmitNewWebinar()">Add Class</button>
+                            <button type="submit" class="btn mx-auto d-block" style="background-color: #624a59;color:#ffe9ef;font-family:Charmonman;" (click)="onSubmitNewWebinar()">Add Webinar</button>
                         </form>
                     </div>
                     <div class="modal-footer ">
@@ -160,8 +160,8 @@
                 </div>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-4 g-4 mt-5 mb-5 card-group" *ngFor="let webObj of webinars">
-            <div class="card " style="width: 18rem; ">
+        <div style="margin-right:5px; margin-left: 5px;" class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-4 g-4 mt-2 mb-2 card-group" *ngFor="let webObj of webinars">
+            <div class="card " style="width:18rem;">
                 <img src="data:image/jpeg;base64,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"
                     class=" card-img-top " alt="... " style="width: 100%; ">
                 <div class="card-body ">
@@ -170,8 +170,8 @@
                     <h4>Speaker:{{webObj.speaker}}</h4>
                     <h5>Date:{{webObj.WebDate}}</h5>
                     <h5>Time:{{webObj.time}}</h5>
-                    <button class="btn btn-primary"><a href={{webObj.webLink}} target="_blank" style="color: white;">Join Webinar</a></button> &nbsp; &nbsp;
-                    <button class="btn btn-warning" (click)="deleteWebinar(webObj)">Delete</button>
+                    <button class="btn float-left" style="background-color: #624a59; text-decoration: none;"><a href={{webObj.webLink}} target="_blank" style="color:#ffe9ef;">Join Webinar</a></button> &nbsp; &nbsp;
+                    <button class="btn float-end" style="background-color: #624a59;color:#ffe9ef;" (click)="deleteWebinar(webObj)">Delete</button>
                 </div>
 
             </div>

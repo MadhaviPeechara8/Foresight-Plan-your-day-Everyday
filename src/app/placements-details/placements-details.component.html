@@ -6,7 +6,7 @@
       <a href="{{x.itemLink}}"  target="_blank" role="button" class="btn add-product"><i class="fas fa-plus-square me-2"></i>Open</a>
     </div>
   </div>  -->
-  <div class="container-fluid">
+  <div class="container-fluid" style="padding-bottom: 30px;">
     <input type="text" name="productTitle" placeholder="Search by Company Name" class="form-control mt-2" [(ngModel)]="searchTerm">
     <br>
     <div class="table-content">
@@ -56,7 +56,7 @@
                         </td>
                         <td>
                             <!-- <img src={{obj.itemLink}} alt="" width="100px">  -->
-                            <a class="btn btn-primary btn-style" role="button" href={{obj.itemLink}} target=_blank>Open</a>
+                            <a class="btn" style="background-color:#624a59; color:white" role="button" href={{obj.itemLink}} target=_blank>Open</a>
                             <!-- {{obj.itemLink}} -->
                         </td>
                         <!-- edit  and delete -->

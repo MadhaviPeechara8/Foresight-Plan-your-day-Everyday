@@ -1,7 +1,12 @@
+#testimonials{
+  margin-right: 5%;
+  margin-left: 5%;
+  padding-bottom: 3%;
+}
 #features
 {
   padding:2% 2%;
-  background-color:#fff;
+  /*background-color:#fff;*/
   position:relative;
   z-index:1;
 }
@@ -16,7 +21,7 @@ color:#000;
 margin-bottom: 1rem;
 }
 .icon:hover{
-color:darkblue;
+color:#624a59;
 }
 .heading{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -31,4 +36,13 @@ color:darkblue;
 width: 150px;
 height:150px;
 border-radius:50%;
+}
+.head1{
+ background-color: #624a59; 
+}
+.head2{
+  background-color: #ffe9ef; 
+}
+.head3{
+  background-color: #624a59;
 }

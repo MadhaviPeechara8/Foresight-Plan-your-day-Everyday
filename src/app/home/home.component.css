@@ -1,3 +1,24 @@
+#header1{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #624a59;
+}
+#header2{
+    background-color: #ffe9ef;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+#header3{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #624a59;
+}
 .card {
     margin: 0 auto;
     float: none;
@@ -6,7 +27,6 @@
 .carousel {
     margin: 0 auto;
     float: none;
-    margin-bottom: 10px;
 }
 
 .form-control{

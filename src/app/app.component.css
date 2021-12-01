@@ -1,0 +1,8 @@
+.con{
+    padding:0;
+    margin:0;
+}
+.nav-item .nav-link :hover{
+    font-weight: bolder;
+    font-size: 10px;
+}

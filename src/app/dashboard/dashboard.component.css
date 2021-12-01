@@ -1,0 +1,15 @@
+.item{
+    margin-top: 10px;
+    background-color: #624159;
+    color:#ffe9ef;
+}
+.item:active
+{
+    color:white;
+    font-weight: bolder;
+}
+.item:hover
+{
+    color:white;
+    font-weight: bolder;
+}
