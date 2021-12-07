@@ -45,6 +45,10 @@ createNewWebinar(Obj:any):Observable<any>{
   console.log(Obj)
   return this.hc.post("/user/addwebinar",Obj);
 }
+createWebinar(Obj:any):Observable<any>{
+  console.log(Obj)
+  return this.hc.post("/user/adminaddwebinar",Obj);
+}
 deleteWebinar(Obj:any):Observable<any>{
   console.log(Obj);
   return this.hc.put("/user/deletewebinar",Obj);

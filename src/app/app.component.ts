@@ -8,10 +8,12 @@ import { UserService } from './user.service';
 })
 export class AppComponent {
   title = 'foresightplanaday';
-  constructor(public us:UserService){}
+  constructor(public us:UserService){
+  }
 
   userLogout(){
     localStorage.clear();
     this.us.userLoginStatus=false;
+    this.us.adminLoginStatus=false;
   }
 }

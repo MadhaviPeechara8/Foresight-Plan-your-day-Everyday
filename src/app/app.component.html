@@ -28,10 +28,12 @@
           <a class="nav-link" routerLink="login" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"  (click)=userLogout()>Logout</a>
         </li>
 
-        <li class="nav-item"  *ngIf="us.userLoginStatus">
+        <li class="nav-item"  *ngIf="(us.userLoginStatus==true) && (us.adminLoginStatus==false)">
           <a class="nav-link" routerLink="dashboard/:username" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Dashboard</a>
         </li>
-
+        <li class="nav-item"  *ngIf="(us.userLoginStatus==true) && (us.adminLoginStatus==true)">
+          <a class="nav-link" routerLink="admindb" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Admin Dashboard</a>
+        </li>
        
 
       </ul>

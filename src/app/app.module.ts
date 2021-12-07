@@ -19,6 +19,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { CodingprofilesComponent } from './codingprofiles/codingprofiles.component';
 import { AddCodingprofilesComponent } from './add-codingprofiles/add-codingprofiles.component';
 import { ViewCodingprofilesComponent } from './view-codingprofiles/view-codingprofiles.component';
+import { AdmindbComponent } from './admindb/admindb.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ViewCodingprofilesComponent } from './view-codingprofiles/view-codingpr
     ContactusComponent,
     CodingprofilesComponent,
     AddCodingprofilesComponent,
-    ViewCodingprofilesComponent
+    ViewCodingprofilesComponent,
+    AdmindbComponent
   ],
   imports: [
     BrowserModule,

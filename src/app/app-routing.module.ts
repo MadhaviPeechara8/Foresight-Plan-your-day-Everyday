@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { AddCodingprofilesComponent } from './add-codingprofiles/add-codingprofiles.component';
 import { AddPlacementsComponent } from './add-placements/add-placements.component';
+import { AdmindbComponent } from './admindb/admindb.component';
 import { CodingprofilesComponent } from './codingprofiles/codingprofiles.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:"register",component:RegisterComponent},
   {path:"login",component:LoginComponent},
   {path:"about",component:AboutComponent},
+  {path:"admindb",component:AdmindbComponent},
   {path:"dashboard/:username",component:DashboardComponent,children:[
     {path:'onlineclasses',component:OnlineclassesComponent},
     {path:'placements',component:PlacementsComponent,children:[
